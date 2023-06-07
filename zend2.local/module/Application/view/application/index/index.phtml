@@ -1,0 +1,25 @@
+<?php
+$title = 'My albums';
+$this->headTitle($title);
+?>
+<?php
+ /*$this->inlineScript()->appendFile($this->basePath() .'/js/app.js');*/
+ $this->inlineScript()->appendFile($this->basePath() .'/js/extjsDesc/app.js');
+?>
+<h1 id='box'><?php echo $this->escapeHtml($title); ?></h1>
+<?php /*echo $this->headScript()->prependFile($this->basePath() . '/js/file.js')    */ ;
+
+?>
+
+ 
+<div>
+<?php foreach ($users as $user) : ?>
+<div>
+    <div><?php echo $this->escapeHtml($user->name);?></div>
+    <div><?php echo $this->escapeHtml($user->surname);?></div>
+    <div><?php echo $this->escapeHtml($user->age);?></div>
+    
+</div>
+<?php endforeach; ?>
+
+</div>
